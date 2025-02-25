@@ -16,7 +16,7 @@ contract StakingScript is Script {
         vm.startBroadcast();
 
         // Deploy the staking contract
-        staking = new Staking(0xdAC17F958D2ee523a2206206994597C13D831ec7, 1e18);
+        // staking = new Staking(0xdAC17F958D2ee523a2206206994597C13D831ec7, 1e18);
 
         vm.stopBroadcast();
     }
