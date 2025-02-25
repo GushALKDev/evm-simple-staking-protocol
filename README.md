@@ -1,66 +1,113 @@
-## Foundry
+# 🏦 Simple Staking Protocol
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+> A straightforward and efficient staking protocol enabling secure token staking with rewards on Ethereum Virtual Machines.
 
-Foundry consists of:
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Solidity](https://img.shields.io/badge/solidity-^0.8.13-blue)](https://docs.soliditylang.org/en/v0.8.13/)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/yourusername/SimpleStaking)
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## 📝 Description
 
-## Documentation
+Simple Staking is a decentralized protocol that provides a secure and efficient way to stake ERC20 tokens and earn rewards. The protocol features a straightforward but battle-tested design, making it ideal for projects looking to implement staking functionality without unnecessary complexity.
 
-https://book.getfoundry.sh/
+## ⚙️ Features
 
-## Usage
+🔐 **Security Features**
+- Reentrancy protection using OpenZeppelin's ReentrancyGuard
+- Comprehensive input validation
+- Access control using Ownable pattern
+- Full test coverage with edge cases
 
-### Build
+🛠️ **Core Functionality**
+- ERC20 token staking
+- Block-based reward calculation
+- Configurable reward rates
+- Partial withdrawals supported
+- Flexible reward distribution
+- Owner-managed reward pool
 
-```shell
-$ forge build
+## 🏗️ Technical Stack
+
+- **Framework**: Foundry
+- **Language**: Solidity ^0.8.13
+- **Standards**: ERC20
+- **Dependencies**: OpenZeppelin Contracts
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Foundry](https://book.getfoundry.sh/getting-started/installation)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/SimpleStaking.git
+cd SimpleStaking
 ```
 
-### Test
-
-```shell
-$ forge test
+2. Install dependencies:
+```bash
+forge install
 ```
 
-### Format
-
-```shell
-$ forge fmt
+3. Run tests:
+```bash
+forge test
 ```
 
-### Gas Snapshots
+## 📖 Core Contracts
 
-```shell
-$ forge snapshot
+### Staking.sol
+Main staking contract handling all staking logic:
+```solidity
+function stake(uint256 amount)
+function withdraw(uint256 amount)
+function getRewards()
+function addRewards(uint256 amount)
 ```
 
-### Anvil
+### ERC20Token.sol
+Test token for development and testing purposes.
 
-```shell
-$ anvil
+## 🔍 Testing
+
+Run the complete test suite:
+```bash
+forge test -vvv
 ```
 
-### Deploy
+Coverage includes:
+- ✅ Setup validation
+- ✅ Staking mechanisms
+- ✅ Withdrawal flows
+- ✅ Reward calculations
+- ✅ Multiple users scenarios
+- ✅ Edge cases
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+## 🔒 Security Considerations
 
-### Cast
+The protocol implements several security measures:
+- NonReentrant modifiers on critical functions
+- Safe math operations (Solidity ^0.8.13)
+- Protected reward pool management
+- Validated user inputs
+- Access control for admin functions
 
-```shell
-$ cast <subcommand>
-```
+## 📄 License
 
-### Help
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 🧪 Test Coverage
+
+The protocol includes extensive testing:
+- Basic staking and withdrawal flows
+- Multiple user interactions
+- Reward calculation accuracy
+- Edge cases and security scenarios
