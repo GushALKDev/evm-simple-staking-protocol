@@ -44,8 +44,8 @@ Simple Staking is a decentralized protocol that provides a secure and efficient 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/SimpleStaking.git
-cd SimpleStaking
+git clone https://github.com/GushALKDev/evm-simple-staking-protocol.git
+cd evm-simple-staking-protocol
 ```
 
 2. Install dependencies:
