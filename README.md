@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Solidity](https://img.shields.io/badge/solidity-^0.8.13-blue)](https://docs.soliditylang.org/en/v0.8.13/)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/yourusername/SimpleStaking)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/GushALKDev/evm-simple-staking-protocol)
 
 ## 📝 Description
 
